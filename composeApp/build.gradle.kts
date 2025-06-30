@@ -37,11 +37,38 @@ kotlin {
         androidMain.dependencies {
             implementation(compose.preview)
             implementation(libs.androidx.activity.compose)
+
+            implementation(libs.accompanist.systemUIController)
+            implementation(libs.core)
+
+            implementation(libs.koin.android)
+            implementation(libs.koin.androidx.compose)
         }
         commonMain.dependencies {
+            api(libs.koin.core)
+            implementation(libs.koin.compose)
+
             implementation(compose.runtime)
             implementation(compose.foundation)
             implementation(compose.material3)
+            implementation(compose.materialIconsExtended)
+
+            implementation(compose.components.resources)
+
+            implementation(libs.kotlinX.serializationJson)
+
+            implementation(libs.material3.window.size.multiplatform)
+
+            implementation(libs.sqlDelight.runtime)
+            implementation(libs.coroutines.extensions)
+            implementation(libs.primitive.adapters)
+
+            api(libs.multiplatformSettings.noArg)
+            api(libs.multiplatformSettings.coroutines)
+
+            implementation(libs.androidx.lifecycle.viewmodel.compose)
+            implementation(libs.androidx.navigation.compose)
+
             implementation(compose.ui)
             implementation(compose.components.resources)
             implementation(compose.components.uiToolingPreview)
