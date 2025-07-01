@@ -5,4 +5,5 @@ import kotlinx.coroutines.flow.Flow
 interface AppSettingsRepository {
 
     fun getUserName(): Flow<String?>
+    fun saveUsername(value: String)
 }

@@ -12,7 +12,7 @@ class MainViewModel(
     appSettingsRepository: AppSettingsRepository
 ): ViewModel() {
 
-    val isOnboardingCompleted : StateFlow<Boolean> = appSettingsRepository.getUserName()
+    val hasOnBoardingCompleted : StateFlow<Boolean> = appSettingsRepository.getUserName()
         .map { !it.isNullOrEmpty() }
         .stateIn(
             scope = viewModelScope,
